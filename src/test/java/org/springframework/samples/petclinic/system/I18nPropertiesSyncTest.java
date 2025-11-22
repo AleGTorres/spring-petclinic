@@ -56,8 +56,10 @@ public class I18nPropertiesSyncTest {
 				String line = lines.get(i).trim();
 
 				if (line.startsWith("//") || line.startsWith("@") || line.contains("log.")
-						|| line.contains("System.out"))
+						|| line.contains("System.out")) {
 					continue;
+				}
+					
 
 				if (file.toString().endsWith(".html")) {
 					boolean hasLiteralText = HTML_TEXT_LITERAL.matcher(line).find();
