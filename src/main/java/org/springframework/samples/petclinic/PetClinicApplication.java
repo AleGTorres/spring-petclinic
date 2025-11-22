@@ -29,8 +29,12 @@ import org.springframework.context.annotation.ImportRuntimeHints;
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
 public class PetClinicApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PetClinicApplication.class, args);
+    private PetClinicApplication() {
+		// prevent instantiation
 	}
+
+    public static void main(String[] args) {
+        SpringApplication.run(PetClinicApplication.class, args);
+    }
 
 }
